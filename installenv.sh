@@ -3,6 +3,11 @@ dockerPath="/usr/local/bin/docker-compose"
 curDir=$(pwd)
 echo -e "\n \n \n"
 echo -e "Email:yanyi5496@gmail.com \n"
+
+echo -e "更新软件包 \n"
+
+sudo apt-get update
+
 echo -e "开始安装 \n"
 
 apt-get install -y docker.io
