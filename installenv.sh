@@ -27,5 +27,5 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 
 echo -e "启动docker容器中 \n"
-docker-compose up -d
+sudo docker-compose up -d
 
