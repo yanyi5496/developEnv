@@ -1,6 +1,6 @@
 #!/bin/bash
 dockerPath="/usr/local/bin/docker-compose"
-curDir=$(pwd)
+curDir=$(pwd)/docker-compose.yml
 echo -e "\n \n \n"
 echo -e "Email:yanyi5496@gmail.com \n"
 
@@ -18,7 +18,7 @@ if [[ ! -x "$dockerPath" ]];then
         echo -e "docker-compose未安装，开始下载 docker-compose \n"
         sudo curl -L "https://developenv-1253922138.cos.ap-chengdu.myqcloud.com/docker-compose-Linux-x86_64" -o /usr/local/bin/docker-compose
 fi
-echo "docker-compose 安装成功 \n"
+echo -e "docker-compose 安装成功 \n"
 
 echo -e "检测当前目录是否有docker-compose.yml文件 \n"
 
@@ -29,7 +29,6 @@ if [[ ! -f "$curDir" ]];then
 fi
 
 sudo chmod +x /usr/local/bin/docker-compose
-
 
 echo -e "启动docker容器中 \n"
 sudo docker-compose up -d
