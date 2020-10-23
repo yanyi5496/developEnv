@@ -12,7 +12,7 @@ echo -e "\n 检查docker-compose是否已安装 \n"
 
 if [[ ! -x "$dockerPath" ]];then
         echo -e "下载 docker-compose \n"
-        sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        sudo curl -L "https://developenv-1253922138.cos.ap-chengdu.myqcloud.com/docker-compose-Linux-x86_64" -o /usr/local/bin/docker-compose
 fi
 
 sudo chmod +x /usr/local/bin/docker-compose
