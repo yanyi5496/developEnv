@@ -1,6 +1,6 @@
 #!/bin/bash
 dockerPath="/usr/local/bin/docker-compose"
-curDir=$(pwd)/docker-compose.yml
+curDir=/home/dev/docker-compose.yml
 echo -e "\n \n \n"
 echo -e "Email:yanyi5496@gmail.com \n"
 
@@ -32,8 +32,8 @@ echo -e "检测当前目录是否有docker-compose.yml文件 \n"
 
 if [[ ! -f "$curDir" ]];then
 		echo -e "文件不存在，开始下载 \n"
-		curl -o docker-compose.yml https://developenv-1253922138.cos.ap-chengdu.myqcloud.com/docker-compose.yml
-		echo -e "docker-compose.yml下载完成 \n"
+		curl -o /home/dev/docker-compose.yml https://developenv-1253922138.cos.ap-chengdu.myqcloud.com/docker-compose.yml
+		echo -e "/home/dev/docker-compose.yml下载完成 \n"
 fi
 
 sudo chmod +x /usr/local/bin/docker-compose

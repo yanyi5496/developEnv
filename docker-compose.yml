@@ -7,22 +7,23 @@ services:
                 ports:
                         - 27777:27017
                 volumes: 
-                        - ./home/dev/mongo/data:/data/db
+                        - /home/dev/mongo/data:/data/db
         redis: 
                 image: yanyi5496/redis:latest
                 container_name: redis
+                command: redis-server --requirepass root
                 restart: always
                 ports: 
-                        - 6379:6379
+                        - 6666:6379
                 volumes: 
-                        - ./home/dev/redis/data:/data
+                        - /home/dev/redis/data:/data
         mysql: 
                 image: yanyi5496/mysql:latest
                 container_name: mysql
                 restart: always
                 ports: 
-                        - 3306:3306
+                        - 33306:3306
                 volumes: 
-                        - ./home/dev/mysql/data:/var/lib/mysql 
+                        - /home/dev/mysql/data:/var/lib/mysql 
                 environment: 
                         - MYSQL_ROOT_PASSWORD=root
