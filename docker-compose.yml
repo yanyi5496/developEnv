@@ -5,9 +5,9 @@ services:
                 container_name: mongo
                 restart: always
                 ports:
-                        - 27017:27017
+                        - 27777:27017
                 volumes: 
-                        - ./home/chen/mongo/data:/data/db
+                        - ./home/dev/mongo/data:/data/db
         redis: 
                 image: yanyi5496/redis:latest
                 container_name: redis
@@ -15,7 +15,7 @@ services:
                 ports: 
                         - 6379:6379
                 volumes: 
-                        - ./home/chen/redis/data:/data
+                        - ./home/dev/redis/data:/data
         mysql: 
                 image: yanyi5496/mysql:latest
                 container_name: mysql
@@ -23,6 +23,6 @@ services:
                 ports: 
                         - 3306:3306
                 volumes: 
-                        - ./home/chen/mysql/data:/var/lib/mysql 
+                        - ./home/dev/mysql/data:/var/lib/mysql 
                 environment: 
                         - MYSQL_ROOT_PASSWORD=root
