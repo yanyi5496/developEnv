@@ -30,8 +30,10 @@ echo -e "docker-compose 安装成功 \n"
 
 echo -e "检测当前目录是否有docker-compose.yml文件 \n"
 
+
 if [[ ! -f "$curDir" ]];then
 		echo -e "文件不存在，开始下载 \n"
+		mkdir /home/dev
 		curl -o /home/dev/docker-compose.yml https://developenv-1253922138.cos.ap-chengdu.myqcloud.com/docker-compose.yml
 		echo -e "/home/dev/docker-compose.yml下载完成 \n"
 fi
@@ -39,5 +41,5 @@ fi
 sudo chmod +x /usr/local/bin/docker-compose
 
 echo -e "启动docker容器中 \n"
-sudo docker-compose up -d
+sudo docker-compose -f /home/dev/docker-compose.yml up -d
 
